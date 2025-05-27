@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Statistics Calculator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+   <h1>Statistics Calculator</h1>
+
+  <!-- Toggle Switch -->
+  <div class="toggle-container">
+    <label>
+      <input type="radio" name="mode" value="ungrouped" checked onclick="switchMode('ungrouped')"> Ungrouped Data
+    </label>
+    <label>
+      <input type="radio" name="mode" value="grouped" onclick="switchMode('grouped')"> Grouped Data
+    </label>
+  </div>
+
+  <!-- Ungrouped Input -->
+  <div id="ungrouped-section" class="input-section visible">
+    <div class="form-group">
+      <label for="ungroupedInput">Enter numbers separated by commas (e.g., 10, 20, 30)</label>
+      <input type="text" id="ungroupedInput">
+    </div>
+  </div>
+
+  <!-- Grouped Input -->
+  <div id="grouped-section" class="input-section">
+    <div class="form-group">
+      <label for="classIntervals">Class Intervals (e.g., 10-20,20-30,...)</label>
+      <input type="text" id="classIntervals">
+    </div>
+    <div class="form-group">
+      <label for="frequencies">Frequencies (e.g., 5,10,...)</label>
+      <input type="text" id="frequencies">
+    </div>
+  </div>
+
+  <div class="toggle-container">
+    <button onclick="analyze()">Compute Statistics</button>
+    <button onclick="generateCumulative()">Generate Cumulative Frequency</button>
+    <button onclick="generateHistogram()">Generate Histogram</button>
+  </div>
+
+  <h2>Computed Results</h2>
+  <table id="resultTable"></table>
+
+  <h2>Cumulative Frequency Table</h2>
+  <table id="cumulativeTable"></table>
+
+  <h2>Histogram</h2>
+  <img id="histogram" />
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

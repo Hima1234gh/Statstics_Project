@@ -1,0 +1,17 @@
+[
+  {
+    "Class Interval": "10-20",
+    "Frequency": 2,
+    "Cumulative Frequecny": 2
+  },
+  {
+    "Class Interval": "20-30",
+    "Frequency": 45,
+    "Cumulative Frequecny": 47
+  },
+  {
+    "Class Interval": "30-40",
+    "Frequency": 6,
+    "Cumulative Frequecny": 53
+  }
+]
