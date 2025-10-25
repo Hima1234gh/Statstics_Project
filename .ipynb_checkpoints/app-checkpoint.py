@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, render_template 
+from flask import Flask, request, jsonify, render_template
 from stat_1 import CentralTendency
 import os
 
